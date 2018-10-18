@@ -8,9 +8,7 @@ body, #container {
 body {
 
     background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/03/92/53/7657e3673496a8b.jpg);
-
     background-repeat: no-repeat;
-
     background-size: 100%;
 
 }
@@ -24,30 +22,33 @@ body {
 
 }
 
-
 #num-counts {
 
     background-color: darkgrey;
     color: darkslateblue;
     text-align: center;
     font-weight: bold;
-    width: 30%;
+    width: 50%;
+    padding: 5px;
+    float: right;
     
 }
 
-#total-Score {
+#numgen, #total-Score, #my-score {
 
     background-color: darkgrey;
     color: darkslateblue;
-    font-weight: bold;
-    width: 30%;
-    padding: 10px;
     text-align: center;
-}
+    font-weight: bold;
+    padding: 5px;
+    width: 30%;
+    margin-bottom: 5px;
 
+}
 
 .crystal-image {
 
     width: 200px;
     height: 200px;
+
 }
