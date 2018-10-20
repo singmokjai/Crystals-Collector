@@ -9,10 +9,12 @@ function targetNumber () {
 
 $("#target-num").text(targetNumber);
 
+
 var counter = 0;
 
 var wins = 0;
 var losses = 0;
+
 
 var randomNums = [10, 11, 13, 14,];
 
@@ -41,23 +43,24 @@ $(".crystal-image").on("click", function() {
     alert("New score: " + counter);
 
 
-
 if (counter === targetNumber) {
 
     alert("You Win!");
 
     wins++;
-    $("#wins").html(wins);
-
-
+    $("#Wins").text(wins);
+    
+   
 }
 
-else if (counter >= targetNumber) {
+else if (counter > targetNumber) {
 
     alert("You lose!");
-}
 
-    
+    losses++;
+
+    $("#Losses").text(losses);
+}
 
 });
 
