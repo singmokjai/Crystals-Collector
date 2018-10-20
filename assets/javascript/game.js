@@ -1,21 +1,28 @@
+var targetNumber = 20
+
+function numberGen() {
+
 var numberOptions = [20, 23, 40, 53];
 
-var targetNumber = 50
-
-function numberGen () {
-
- return numberOptions [Math.floor(Math.random() * numberOptions.length)];
+return numberOptions [Math.floor(Math.random() * numberOptions.length)];
 
 }
+
+var reset = function() {
+
+    targetNumber = numberGen();
+    return numberGen();
+    counter = 0;
+    $("#target-num").text(reset());
+}
+
+
 
 
 $("#target-num").text(targetNumber);
 
 
-
 var counter = 0;
-
-
 var wins = 0;
 var losses = 0;
 
@@ -33,6 +40,7 @@ for (var i = 0; i < randomNums.length; i++) {
     picCrystal.attr("crystalValue", randomNums[i]);
 
     $("#crystals").append(picCrystal);
+
 }
 
 
@@ -54,21 +62,20 @@ $(".crystal-image").on("click", function() {
     if (counter === targetNumber) {
 
         alert("You Win!");
-
-        winReset ();
-        console.log(winReset)
         wins++;
         $("#Wins").text(wins);
+        reset();
+        console.log(reset())
         
     }
 
     else if (counter > targetNumber) {
 
         alert("You lose!");
-
         losses++;
-
         $("#Losses").text(losses);
+        reset();
+
     }
 
 
@@ -76,10 +83,6 @@ $(".crystal-image").on("click", function() {
 
 
 
-var winReset = function () {
-
-    return numberOptions [Math.floor(Math.random() * numberOptions.length)];
-}
 
 
 
