@@ -8,16 +8,6 @@ return numberOptions [Math.floor(Math.random() * numberOptions.length)];
 
 }
 
-var reset = function() {
-
-    targetNumber = numberGen();
-    return numberGen();
-    counter = 0;
-    $("#target-num").text(reset());
-}
-
-
-
 
 $("#target-num").text(targetNumber);
 
@@ -42,6 +32,16 @@ for (var i = 0; i < randomNums.length; i++) {
     $("#crystals").append(picCrystal);
 
 }
+
+    function reset() {
+
+    return numberGen();
+    counter();
+
+};
+
+
+reset();
 
 
 $(".crystal-image").on("click", function() {
@@ -75,9 +75,11 @@ $(".crystal-image").on("click", function() {
         losses++;
         $("#Losses").text(losses);
         reset();
+        console.log(reset());
 
     }
 
+reset()
 
 });
 
