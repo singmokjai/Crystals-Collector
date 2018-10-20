@@ -1,6 +1,8 @@
 var numberOptions = [20, 23, 40, 53];
 
-function targetNumber () {
+var targetNumber = 50
+
+function numberGen () {
 
  return numberOptions [Math.floor(Math.random() * numberOptions.length)];
 
@@ -10,7 +12,9 @@ function targetNumber () {
 $("#target-num").text(targetNumber);
 
 
+
 var counter = 0;
+
 
 var wins = 0;
 var losses = 0;
@@ -40,27 +44,43 @@ $(".crystal-image").on("click", function() {
 
     counter += crystalNum;
 
+
+    $("#total-score").text(counter);
+    
+
     alert("New score: " + counter);
 
-
-if (counter === targetNumber) {
-
-    alert("You Win!");
-
-    wins++;
-    $("#Wins").text(wins);
     
-   
-}
+    if (counter === targetNumber) {
 
-else if (counter > targetNumber) {
+        alert("You Win!");
 
-    alert("You lose!");
+        winReset ();
+        console.log(winReset)
+        wins++;
+        $("#Wins").text(wins);
+        
+    }
 
-    losses++;
+    else if (counter > targetNumber) {
 
-    $("#Losses").text(losses);
-}
+        alert("You lose!");
+
+        losses++;
+
+        $("#Losses").text(losses);
+    }
+
 
 });
+
+
+
+var winReset = function () {
+
+    return numberOptions [Math.floor(Math.random() * numberOptions.length)];
+}
+
+
+
 
