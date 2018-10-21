@@ -16,9 +16,17 @@ body {
 #header {
 
     background-color: darkgrey;
-    color: darkslateblue;
+    color: darkblue;
     text-align: center;
     padding: 5px;
+
+}
+
+#Game-Description {
+
+    color: darkslateblue;
+    font-weight: bolder;
+    background-color: honeydew;
 
 }
 
@@ -34,7 +42,7 @@ body {
     
 }
 
-#numgen, #total-Score, #my-score {
+#numgen, #total-Score {
 
     background-color: darkgrey;
     color: darkslateblue;

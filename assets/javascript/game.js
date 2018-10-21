@@ -51,10 +51,7 @@ $(".crystal-image").on("click", function() {
 
     counter += crystalNum;
 
-
     $("#total-score").text(counter);
-    
-    
     
     if (counter === targetNumber) {
 
@@ -62,7 +59,7 @@ $(".crystal-image").on("click", function() {
         wins++;
         $("#Wins").text(wins);
         reset();
-     
+    
     }
 
     else if (counter > targetNumber) {
@@ -73,8 +70,6 @@ $(".crystal-image").on("click", function() {
         reset();
         
     }
-
-
 
 });
 
