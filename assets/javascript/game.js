@@ -54,9 +54,7 @@ $(".crystal-image").on("click", function() {
 
     $("#total-score").text(counter);
     
-
-    alert("New score: " + counter);
-
+    
     
     if (counter === targetNumber) {
 
