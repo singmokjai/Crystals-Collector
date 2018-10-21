@@ -1,4 +1,4 @@
-var targetNumber = 20
+var targetNumber;
 
 function numberGen() {
 
@@ -7,9 +7,6 @@ var numberOptions = [20, 23, 40, 53];
 return numberOptions [Math.floor(Math.random() * numberOptions.length)];
 
 }
-
-
-$("#target-num").text(targetNumber);
 
 
 var counter = 0;
@@ -35,10 +32,12 @@ for (var i = 0; i < randomNums.length; i++) {
 
     function reset() {
 
-    return numberGen();
-    counter();
+    targetNumber = numberGen();
+    counter = 0;
+    $("#target-num").text(targetNumber);   
+    $("#total-score").text(counter);
 
-};
+}
 
 
 reset();
@@ -65,8 +64,7 @@ $(".crystal-image").on("click", function() {
         wins++;
         $("#Wins").text(wins);
         reset();
-        console.log(reset())
-        
+     
     }
 
     else if (counter > targetNumber) {
@@ -75,11 +73,10 @@ $(".crystal-image").on("click", function() {
         losses++;
         $("#Losses").text(losses);
         reset();
-        console.log(reset());
-
+        
     }
 
-reset()
+
 
 });
 
